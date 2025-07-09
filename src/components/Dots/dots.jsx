@@ -14,7 +14,7 @@ const DotsItemStyle = styled.li`
     background-color: ${props => props.color}
 `
 
-export const Dots = () => {
+const Dots = () => {
     return (
         <DotsWrapper>
             <DotsItemStyle color={'red'} />
@@ -23,3 +23,5 @@ export const Dots = () => {
         </DotsWrapper>
     )
 }
+
+export default Dots

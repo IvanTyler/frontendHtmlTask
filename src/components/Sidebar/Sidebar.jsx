@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { bottomRoutes, routes } from '../../data/mock-data';
 import styled from 'styled-components';
 import { NavigationList } from '../NavigationList/NavigationList';
-import { Dots } from '../dots/dots';
+import Dots from '../dots/dots';
 
 export const SideBar = styled.div`
         display: flex;
@@ -158,43 +158,42 @@ const Sidebar = (props) => {
                 color={color}
             >
                 <Dots />
-                <LinkStyled>
-                    <ImgStyled
-                        {...(isOpened ? { isopened: 'true' } : {})}
-                        src={logo} alt="TensorFlow logo"
-                    />
-                    <TextLogo
-                        color={color}
-                        {...(isOpened ? { isopened: 'true' } : {})}
-                    >TensorFlow</TextLogo>
-
-                    <ButtonStyled
-                        color={color}
-                        {...(isOpened ? { isopened: 'true' } : {})}
-                        onClick={toggleSidebar}
-                    >
-                        <FontAwesomeIcon icon={isOpened ? 'angle-right' : 'angle-left'} />
-                    </ButtonStyled>
-                </LinkStyled>
-
-
-
-                <NavigationList
-                    color={color}
-                    isOpened={isOpened}
-                    goToRoute={goToRoute}
-                    list={routesNavList}
-                    copiedText={copiedText}
+                <ImgStyled
+                    {...(isOpened ? { isopened: 'true' } : {})}
+                    src={logo} alt="TensorFlow logo"
                 />
-
-                <NavigationList
+                <TextLogo
                     color={color}
-                    isOpened={isOpened}
-                    goToRoute={goToRoute}
-                    list={bottomRoutes} />
+                    {...(isOpened ? { isopened: 'true' } : {})}
+                >TensorFlow</TextLogo>
 
-            </SideBar>
-        </Wrapper>
+                <ButtonStyled
+                    color={color}
+                    {...(isOpened ? { isopened: 'true' } : {})}
+                    onClick={toggleSidebar}
+                >
+                    <FontAwesomeIcon icon={isOpened ? 'angle-right' : 'angle-left'} />
+                </ButtonStyled>
+            </LinkStyled>
+
+
+
+            <NavigationList
+                color={color}
+                isOpened={isOpened}
+                goToRoute={goToRoute}
+                list={routesNavList}
+                copiedText={copiedText}
+            />
+
+            <NavigationList
+                color={color}
+                isOpened={isOpened}
+                goToRoute={goToRoute}
+                list={bottomRoutes} />
+
+        </SideBar>
+        </Wrapper >
     );
 };
 
