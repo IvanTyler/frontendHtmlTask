@@ -158,42 +158,43 @@ const Sidebar = (props) => {
                 color={color}
             >
                 <Dots />
-                <ImgStyled
-                    {...(isOpened ? { isopened: 'true' } : {})}
-                    src={logo} alt="TensorFlow logo"
+                <LinkStyled>
+                    <ImgStyled
+                        {...(isOpened ? { isopened: 'true' } : {})}
+                        src={logo} alt="TensorFlow logo"
+                    />
+                    <TextLogo
+                        color={color}
+                        {...(isOpened ? { isopened: 'true' } : {})}
+                    >TensorFlow</TextLogo>
+
+                    <ButtonStyled
+                        color={color}
+                        {...(isOpened ? { isopened: 'true' } : {})}
+                        onClick={toggleSidebar}
+                    >
+                        <FontAwesomeIcon icon={isOpened ? 'angle-right' : 'angle-left'} />
+                    </ButtonStyled>
+                </LinkStyled>
+
+
+
+                <NavigationList
+                    color={color}
+                    isOpened={isOpened}
+                    goToRoute={goToRoute}
+                    list={routesNavList}
+                    copiedText={copiedText}
                 />
-                <TextLogo
+
+                <NavigationList
                     color={color}
-                    {...(isOpened ? { isopened: 'true' } : {})}
-                >TensorFlow</TextLogo>
+                    isOpened={isOpened}
+                    goToRoute={goToRoute}
+                    list={bottomRoutes} />
 
-                <ButtonStyled
-                    color={color}
-                    {...(isOpened ? { isopened: 'true' } : {})}
-                    onClick={toggleSidebar}
-                >
-                    <FontAwesomeIcon icon={isOpened ? 'angle-right' : 'angle-left'} />
-                </ButtonStyled>
-            </LinkStyled>
-
-
-
-            <NavigationList
-                color={color}
-                isOpened={isOpened}
-                goToRoute={goToRoute}
-                list={routesNavList}
-                copiedText={copiedText}
-            />
-
-            <NavigationList
-                color={color}
-                isOpened={isOpened}
-                goToRoute={goToRoute}
-                list={bottomRoutes} />
-
-        </SideBar>
-        </Wrapper >
+            </SideBar>
+        </Wrapper>
     );
 };
 
