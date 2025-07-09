@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png';
 import PropTypes from 'prop-types';
 import { bottomRoutes, routes } from '../../data/mock-data';
-import { Dots } from '../dots/dots';
 import styled from 'styled-components';
 import { NavigationList } from '../NavigationList/NavigationList';
+import { Dots } from '../dots/dots';
 
 export const SideBar = styled.div`
         display: flex;
