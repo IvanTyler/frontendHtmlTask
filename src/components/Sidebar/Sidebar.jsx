@@ -13,6 +13,7 @@ const SideBar = styled.div`
         flex-direction: column;
         padding: 20px;
         width: ${props => props.isopened ? '90px' : '200px'};
+        height: 100%;
         border-radius: 12px;
         margin-top: 20px;
 
