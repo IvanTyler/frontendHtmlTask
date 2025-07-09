@@ -8,7 +8,7 @@ import { Dots } from '../dots/dots';
 import styled from 'styled-components';
 import { NavigationList } from '../NavigationList/NavigationList';
 
-const SideBar = styled.div`
+export const SideBar = styled.div`
         display: flex;
         flex-direction: column;
         padding: 20px;
