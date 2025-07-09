@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { bottomRoutes, routes } from '../../data/mock-data';
 import styled from 'styled-components';
 import { NavigationList } from '../NavigationList/NavigationList';
-import Dots from '../dots/dots';
+import { Interactions } from '../Interactions/Interactions'
 
 export const SideBar = styled.div`
         display: flex;
@@ -157,7 +157,7 @@ const Sidebar = (props) => {
                 {...(isOpened ? { isopened: 'true' } : {})}
                 color={color}
             >
-                <Dots />
+                <Interactions />
                 <LinkStyled>
                     <ImgStyled
                         {...(isOpened ? { isopened: 'true' } : {})}
